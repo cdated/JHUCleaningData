@@ -34,16 +34,16 @@ test_path <- paste(dataset_path, "test", sep='/')
 train_path <- paste(dataset_path, "train", sep='/')
 
 # Load all of the data into memory
-#train_x <- read.table(paste(train_path, "X_train.txt", sep='/'))
-#train_y <- read.table(paste(train_path, "y_train.txt", sep='/'))
-#train_subject <- read.table(paste(train_path, "subject_train.txt", sep='/'))
+train_x <- read.table(paste(train_path, "X_train.txt", sep='/'))
+train_y <- read.table(paste(train_path, "y_train.txt", sep='/'))
+train_subject <- read.table(paste(train_path, "subject_train.txt", sep='/'))
 
-#test_x <- read.table(paste(test_path, "X_test.txt", sep='/'))
-#test_y <- read.table(paste(test_path, "y_test.txt", sep='/'))
-#test_subject <- read.table(paste(test_path, "subject_test.txt", sep='/'))
+test_x <- read.table(paste(test_path, "X_test.txt", sep='/'))
+test_y <- read.table(paste(test_path, "y_test.txt", sep='/'))
+test_subject <- read.table(paste(test_path, "subject_test.txt", sep='/'))
 
-#features <- read.table(paste(dataset_path, "features.txt", sep='/'))[,2]
-#activity <- read.table(paste(dataset_path, "activity_labels.txt", sep='/'))
+features <- read.table(paste(dataset_path, "features.txt", sep='/'))[,2]
+activity <- read.table(paste(dataset_path, "activity_labels.txt", sep='/'))
 
 names(activity) = c("activity_id", "activity")
 
@@ -70,8 +70,9 @@ stdmean_data <- full_data[,stdmean_features]
 
 write.csv(stdmean_data, "./data/stdmean.csv")
 
-# Use melt as mentioned in http://vita.had.co.nz/papers/tidy-data.pdf by Hadley Wickham
-# to give each experiment variable a column and ensure each row has one observation.
+# Use melt as mentioned in http://vita.had.co.nz/papers/tidy-data.pdf
+# by Hadley Wickham to give each experiment variable a column and ensure
+# each row has one observation.
 # Also favor grouping by fixed variables like subject and activity
 id_labels = c("subject", "activity")
 data_labels = setdiff(colnames(full_data), id_labels)
