@@ -2,7 +2,6 @@ JHUCleaningData
 ===============
 
 ### `run_analyis.R` function
-===========================================
 
 The R script `run_analysis.R` will download and process the Human Activity Recognition Using Smartphones Data Set.  
 
@@ -17,16 +16,13 @@ A data directory will be created in the repository where all input and output fi
 
 
 ### `get_data.R` function
-===========================================
 
 This is a helper script which creates the data directory if it doesn't exist and downloads the source data if it isn't already in place.
 
-====================
 ### Source
 
 Data set and experiment details were provided by the Machine Learning Repository: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-====================
 ## Dependencies
 
 `run_analysis.R` depends on `dplyr` and `reshape2` libraries
