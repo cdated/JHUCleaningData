@@ -5,7 +5,7 @@ JHUCleaningData
 
 The R script `run_analysis.R` will download and process the Human Activity Recognition Using Smartphones Data Set.  
 
-It will generate the following files:
+It will generate the following files examples outputs provided in the codebook:
 - `stdmean.csv` : The combined training and test data sets filtered by columns depicting the standard deviation and mean of the experimental measurements
 
 - `tidy_all.csv` : All of the data combined and normalized according to http://vita.had.co.nz/papers/tidy-data.pdf
